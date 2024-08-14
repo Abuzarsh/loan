@@ -1,0 +1,302 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 12px 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+.bg-image {
+    background-image: url('img.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.5em;
+}
+
+/* Services Section */
+/* Slider Styles */
+/* Slider Styles */
+#services{
+    background-color: white;
+    overflow-x: hidden;
+
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider-container {
+    display: flex;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.service-item {
+    flex: 0 0 80%;
+    /* Adjusted to make the items smaller */
+    box-sizing: border-box;
+    padding: 20px;
+    /* Added padding for spacing */
+    margin: 0 10px;
+    /* Added margin for spacing between items */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for better visibility */
+    transition: transform 0.3s ease;
+    /* Smooth scale transition */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    /* Limit image height */
+    object-fit: cover;
+    /* Ensure the image covers its container */
+}
+
+#services h2 {
+    text-align: center;
+    color: rgba(47, 112, 197, 0.685);
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 0 0 90%;
+        /* Slightly larger items on smaller screens */
+        margin: 0 5px;
+        /* Reduced margin */
+    }
+
+    button.prev,
+    button.next {
+        padding: 8px;
+    }
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transform: translateY(50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+
+    button.prev,
+    button.next {
+        padding: 8px;
+    }
+}
+
+
+/* About and Contact Sections */
+#about,
+#contact {
+    padding: 50px;
+    text-align: center;
+
+}
+#contact{
+    background-color: antiquewhite;
+}
+#about{
+    background-color: rgb(126, 168, 173);
+}
+#about img,
+#contact img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+
+    .service-item {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 15px;
+    }
+
+    .service-item {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bg-image {
+        height: 50vh;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1.2em;
+    }
+
+    .service-item {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .service-item {
+        margin: 5px;
+        padding: 15px;
+    }
+}
